@@ -154,11 +154,8 @@ public final class SkullUtils {
             return;
         }
 
-        if (Version.after(Version.v1_21_R5)) {
-            XSkull.of(itemStack).profile(Profileable.detect(texture)).apply();
-            return;
-        }
-
+        XSkull.of(itemStack).profile(Profileable.detect(texture)).apply();
+        /*
         try {
             ItemMeta meta = itemStack.getItemMeta();
             if (meta instanceof SkullMeta) {
@@ -198,6 +195,8 @@ public final class SkullUtils {
         } catch (Exception e) {
             Log.error("An exception occurred while setting skull texture", e);
         }
+
+         */
     }
 
     /**
